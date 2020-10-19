@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{338d374c-3729-4839-9cb4-e0432c332aab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometry">
+      <UniqueIdentifier>{dafa9214-7708-4fb1-ba1f-217e2b12037b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Maths">
+      <UniqueIdentifier>{786fdd8e-526d-4e91-9deb-9cdbf064aa0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Meshes">
+      <UniqueIdentifier>{c867eb4c-8dcf-4627-bfcf-e50e71a26141}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{6f355f8c-e75e-4d8c-9b33-16e309199f96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DLL">
+      <UniqueIdentifier>{0a62d25c-af4c-4374-9e2e-ddc2a88b8d75}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimSpriteComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundSpriteComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleCollisionComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="InputComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Cube.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix4.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Quaternion.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Random.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexArray.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Shader.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="RendererOGL.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Meshes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Actor.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimSpriteComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="BackgroundSpriteComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleCollisionComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="InputComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Cube.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix4.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Quaternion.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexArray.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Window.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Shader.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="RendererOGL.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="IRenderer.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionalLight.h">
+      <Filter>Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Meshes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\Meshes\Cube.gpmesh">
+      <Filter>Meshes</Filter>
+    </None>
+    <None Include="Res\Meshes\Plane.gpmesh">
+      <Filter>Meshes</Filter>
+    </None>
+    <None Include="Res\Meshes\Sphere.gpmesh">
+      <Filter>Meshes</Filter>
+    </None>
+    <None Include="Res\Shaders\BasicMesh.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Res\Shaders\BasicMesh.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Res\Shaders\Phong.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Res\Shaders\Phong.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Res\Shaders\Sprite.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Res\Shaders\Sprite.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="glew32.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="libFLAC-8.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="libfreetype-6.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="libjpeg-9.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="libmodplug-1.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="libmpg123-0.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="libogg-0.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="libopusfile-0.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="libopus-0.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="libpng16-16.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="libtiff-5.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="libvorbis-0.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="libvorbisfile-3.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="libwebp-7.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="SDL2.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="SDL2_image.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="SDL2_ttf.dll">
+      <Filter>DLL</Filter>
+    </None>
+    <None Include="zlib1.dll">
+      <Filter>DLL</Filter>
+    </None>
+  </ItemGroup>
+</Project>
