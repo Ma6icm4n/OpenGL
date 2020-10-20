@@ -1,46 +1,48 @@
 #include "Cube.h"
 #include "MeshComponent.h"
+#include "MoveComponent.h"
+#include "Log.h"
 #include "Assets.h"
 
-Cube::Cube() :
-	rotation(Vector2(0.0f, 0.0f)),
-	velocite(Vector2(0.0f, 0.0f)),
-	tourne(false),
-	x1(0),
-	xMouse(0),
-	y1(0),
-	yMouse(0)
+Cube::Cube() : rotationVelocity(Vector2(0.0f, 0.0f)), mousePreviousX(0), mousePreviousY(0), mousefinalX(0), mousefinalY(0),
+	rotate(false) , angularSpeed(0), moveComponent(nullptr)
 {
+	moveComponent = new MoveComponent(this);
 	MeshComponent* mc = new MeshComponent(this);
 	mc->setMesh(Assets::getMesh("Mesh_Cube"));
 }
 
-void Cube::updateActor(float dt)
-{
-	Quaternion q;
-	if (tourne)
-	{
-		SDL_GetMouseState(&xMouse, &yMouse);
-		rotation = Vector2((x1 - xMouse) / 20, (y1 - yMouse) / 20);
+void Cube::updateActor(float deltaTime) {
+	
+	if (rotate) {
+		
+		rotationVelocity = Vector2((mousePreviousX - mousefinalX) / 30, (mousePreviousY - mousefinalY) / 30);
+		Log::info("PRESQUIEHDKBO");
+		
 	}
-	else
-	{
-		rotation *= 0.95;
+	else {
+		rotationVelocity *= 0.50;
+		
 	}
-	q = Quaternion::concatenate(q, Quaternion(Vector3::unitZ, rotation.x / 100));
-	q = Quaternion::concatenate(q, Quaternion(Vector3::unitY, rotation.y / 100));
-	setRotation(Quaternion::concatenate(getRotation(), q));
+	moveComponent->updateObjectRotation(rotationVelocity, deltaTime, angularSpeed);
+	
+	
+
 }
 
-void Cube::actorInput(SDL_MouseButtonEvent& mouseEvent)
-{
-	if (mouseEvent.button == SDL_BUTTON_LEFT && mouseEvent.type == SDL_MOUSEBUTTONDOWN)
-	{
-		tourne = true;
-		SDL_GetMouseState(&x1, &y1);
+void Cube::rotateActor(const Uint32 mouseState, SDL_Event& clickEvent) {
+
+	
+	if (clickEvent.button.button == SDL_BUTTON_LEFT && clickEvent.type == SDL_MOUSEBUTTONDOWN) {
+		rotate = true;
+		SDL_GetMouseState(&mousePreviousX, &mousePreviousY);
+		
 	}
-	if (mouseEvent.button == SDL_BUTTON_LEFT && mouseEvent.type == SDL_MOUSEBUTTONUP)
-	{
-		tourne = false;
+	if (clickEvent.type == SDL_MOUSEMOTION) {
+		SDL_GetMouseState(&mousefinalX, &mousefinalY);
+	}
+	if (clickEvent.type == SDL_MOUSEBUTTONUP) {
+		rotate = false;
 	}
 }
+

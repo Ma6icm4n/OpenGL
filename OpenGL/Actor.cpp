@@ -3,6 +3,7 @@
 #include "Game.h"
 #include "Component.h"
 #include "Maths.h"
+#include <SDL.h>
 
 Actor::Actor() :
 	state(Actor::ActorState::Active),
@@ -107,6 +108,10 @@ void Actor::updateComponents(float dt)
 
 void Actor::updateActor(float dt)
 {
+}
+
+void Actor::rotateActor(const Uint32 mouseState, SDL_Event& clickEvent) {
+
 }
 
 void Actor::addComponent(Component* component)

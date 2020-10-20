@@ -4,7 +4,6 @@
 #include <SDL_stdinc.h>
 #include "Matrix4.h"
 #include <SDL.h>
-
 using std::vector;
 
 class Game;
@@ -29,7 +28,7 @@ public:
 	const Vector3 getPosition() const { return position; }
 	const float getScale() const { return scale; }
 	const Quaternion getRotation() const { return rotation; }
-	const Matrix4& getWorldTransform() const { return worldTransform; }
+	const Matrix4& getWorldTransform() const { return worldTransform;  }
 
 	void setPosition(Vector3 positionP);
 	void setScale(float scaleP);
@@ -41,12 +40,14 @@ public:
 
 	void processInput(const Uint8* keyState);
 	virtual void actorInput(const Uint8* keyState);
-	virtual void actorInput(SDL_MouseButtonEvent& keyState) {}
 	void update(float dt);
 	void updateComponents(float dt);
 	virtual void updateActor(float dt);
 	void addComponent(Component* component);
 	void removeComponent(Component* component);
+
+	//mouse action rotate
+	virtual void rotateActor(const Uint32 mouseState, SDL_Event& clickEvent);
 
 private:
 	Game& game;
@@ -59,3 +60,4 @@ private:
 
 	vector<Component*> components;
 };
+

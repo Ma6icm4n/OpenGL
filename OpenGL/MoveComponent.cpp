@@ -25,8 +25,8 @@ void MoveComponent::update(float dt)
 	{
 		Quaternion newRotation = owner.getRotation();
 		float angle = angularSpeed * dt;
-		Quaternion increment(Vector3::unitZ, angle);
-		newRotation = Quaternion::concatenate(newRotation, increment);
+		Quaternion incrementZ(Vector3::unitZ, angle);
+		newRotation = Quaternion::concatenate(newRotation, incrementZ);
 		owner.setRotation(newRotation);
 	}
 	if (!Maths::nearZero(forwardSpeed))
@@ -34,4 +34,12 @@ void MoveComponent::update(float dt)
 		Vector3 newPosition = owner.getPosition() + owner.getForward() * forwardSpeed * dt;
 		owner.setPosition(newPosition);
 	}
+}
+
+void MoveComponent::updateObjectRotation(Vector2 rotationVelocity, float dt, float angularSpeed) {
+
+		Quaternion newRotation = owner.getRotation();
+		newRotation = Quaternion::concatenate(newRotation, Quaternion(Vector3::unitZ, rotationVelocity.x / 50));
+		newRotation = Quaternion::concatenate(newRotation, Quaternion(Vector3::unitY, rotationVelocity.y / 50));
+		owner.setRotation(newRotation);
 }

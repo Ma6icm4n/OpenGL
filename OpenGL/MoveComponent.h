@@ -1,5 +1,6 @@
 #pragma once
 #include "Component.h"
+#include "Vector2.h"
 class MoveComponent : public Component
 {
 public:
@@ -15,6 +16,8 @@ public:
 	void setAngularSpeed(float angularSpeedP);
 
 	void update(float dt) override;
+
+	void updateObjectRotation(Vector2 rotationVelocity, float dt, float angularSpeed);
 
 
 private:
